@@ -1,0 +1,19 @@
+.header {
+  background: #999;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  padding: .5rem 2rem;
+}
+
+.logo {
+  max-width: 20px;
+}
+
+.title {
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
