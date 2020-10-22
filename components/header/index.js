@@ -6,7 +6,7 @@ export const Header = () => (
   <header className={style.header}>
     <nav className={`wrapper ${style.wrapper}`}>
       <img src={logo} className={style.logo} />
-      <h1 className={style.title}>Oompa Loompa&apos;s Crew</h1>
+      <span className={style.title}>Oompa Loompa&apos;s Crew</span>
     </nav>
   </header>
 )

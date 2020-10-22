@@ -12,11 +12,11 @@ exports[`renders correctly 1`] = `
         class="logo"
         src=""
       />
-      <h1
+      <span
         class="title"
       >
         Oompa Loompa's Crew
-      </h1>
+      </span>
     </nav>
   </header>
 </DocumentFragment>
