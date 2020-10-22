@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+  >
+    <nav
+      class="wrapper wrapper"
+    >
+      <img
+        class="logo"
+        src=""
+      />
+      <h1
+        class="title"
+      >
+        Oompa Loompa's Crew
+      </h1>
+    </nav>
+  </header>
+</DocumentFragment>
+`;
