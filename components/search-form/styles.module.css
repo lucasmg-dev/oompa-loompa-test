@@ -1,0 +1,30 @@
+.searchForm {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.5rem 0;
+}
+
+.searchFormGroup {
+  border: 2px solid #999;
+  border-radius: 6px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px 10px;
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.searchInput {
+  border: 0;
+  border-radius: 6px;
+}
+
+.searchIcon {
+  align-items: center;
+  border-left: 1px solid #999;
+  display: flex;
+  padding-left: 10px;
+}
