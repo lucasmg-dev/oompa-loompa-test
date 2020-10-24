@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<DocumentFragment>
+  <h1
+    class="h1"
+  >
+    Find your Oompa Loompa
+  </h1>
+  <h2
+    class="h2"
+  >
+    There are more than 100k
+  </h2>
+</DocumentFragment>
+`;
