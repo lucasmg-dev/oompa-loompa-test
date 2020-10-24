@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<DocumentFragment>
+  <section>
+    <div
+      class="wrapper"
+    >
+      <div
+        class="grid"
+      >
+        <article>
+          <figure
+            class="figure"
+          >
+            <img
+              class="image"
+              src="https://s3.eu-central-1.amazonaws.com/napptilus/level-test/1.jpg"
+            />
+          </figure>
+          <h2
+            class="name"
+          >
+            Marcy Karadzas
+          </h2>
+          <span
+            class="gender"
+          >
+            Woman
+          </span>
+          <h3
+            class="profession"
+          >
+            Developer
+          </h3>
+        </article>
+        <article>
+          <figure
+            class="figure"
+          >
+            <img
+              class="image"
+              src="https://s3.eu-central-1.amazonaws.com/napptilus/level-test/2.jpg"
+            />
+          </figure>
+          <h2
+            class="name"
+          >
+            Evangelia Cowin
+          </h2>
+          <span
+            class="gender"
+          >
+            Man
+          </span>
+          <h3
+            class="profession"
+          >
+            Metalworker
+          </h3>
+        </article>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
