@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<DocumentFragment>
+  <article>
+    <figure
+      class="figure"
+    >
+      <img
+        class="image"
+        src="https://s3.eu-central-1.amazonaws.com/napptilus/level-test/1.jpg"
+      />
+    </figure>
+    <h2
+      class="name"
+    >
+      Marcy Karadzas
+    </h2>
+    <span
+      class="gender"
+    >
+      Woman
+    </span>
+    <h3
+      class="profession"
+    >
+      Developer
+    </h3>
+  </article>
+</DocumentFragment>
+`;
