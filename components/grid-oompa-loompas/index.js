@@ -6,24 +6,32 @@ export const GridOompaLoompas = ({ data }) => {
   return (
     <section>
       <div className='wrapper'>
-        <div className={styles.grid}>
-          {data.results.map(
-            ({ id, image, first_name: firstName, last_name: lastName, gender, profession }) => (
-              <OompaLoompaCard
-                key={id}
-                image={image}
-                firstName={firstName}
-                lastName={lastName}
-                gender={gender}
-                profession={profession} />
-            )
-          )}
-        </div>
+        {data.length < 1 && (
+          <div className={styles.notFound}>
+            <p className={styles.notFoundText}>No se han encontrado resultados</p>
+          </div>
+        )}
+        {data.length > 0 && (
+          <div className={styles.grid}>
+            {data.map(
+              ({ id, image, first_name: firstName, last_name: lastName, gender, profession }) => (
+                <OompaLoompaCard
+                  key={id}
+                  id={id}
+                  image={image}
+                  firstName={firstName}
+                  lastName={lastName}
+                  gender={gender}
+                  profession={profession} />
+              )
+            )}
+          </div>
+        )}
       </div>
     </section>
   )
 }
 
 GridOompaLoompas.propTypes = {
-  data: propTypes.object
+  data: propTypes.array
 }

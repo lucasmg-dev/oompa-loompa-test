@@ -4,6 +4,20 @@
   gap: 2.5rem 1.4rem;
 }
 
+.notFound {
+  display: flex;
+  justify-content: center;
+}
+
+.notFoundText {
+  border: 1px solid red;
+  color: red;
+  display: inline-flex;
+  justify-content: center;
+  margin: 0;
+  padding: .3rem 1rem;
+}
+
 @media (min-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 1fr)

@@ -10,55 +10,91 @@ exports[`renders correctly 1`] = `
         class="grid"
       >
         <article>
-          <figure
-            class="figure"
+          <a
+            href="/1"
           >
-            <img
-              class="image"
-              src="https://s3.eu-central-1.amazonaws.com/napptilus/level-test/1.jpg"
-            />
-          </figure>
-          <h2
-            class="name"
+            <figure
+              class="figure"
+            >
+              <img
+                class="image"
+                src="https://s3.eu-central-1.amazonaws.com/napptilus/level-test/1.jpg"
+              />
+            </figure>
+          </a>
+          <a
+            href="/1"
           >
-            Marcy Karadzas
-          </h2>
-          <span
-            class="gender"
-          >
-            Woman
-          </span>
-          <h3
-            class="profession"
-          >
-            Developer
-          </h3>
+            <h2
+              class="name"
+            >
+              Marcy Karadzas
+            </h2>
+            <span
+              class="gender"
+            >
+              Woman
+            </span>
+            <h3
+              class="profession"
+            >
+              Developer
+            </h3>
+          </a>
         </article>
         <article>
-          <figure
-            class="figure"
+          <a
+            href="/2"
           >
-            <img
-              class="image"
-              src="https://s3.eu-central-1.amazonaws.com/napptilus/level-test/2.jpg"
-            />
-          </figure>
-          <h2
-            class="name"
+            <figure
+              class="figure"
+            >
+              <img
+                class="image"
+                src="https://s3.eu-central-1.amazonaws.com/napptilus/level-test/2.jpg"
+              />
+            </figure>
+          </a>
+          <a
+            href="/2"
           >
-            Evangelia Cowin
-          </h2>
-          <span
-            class="gender"
-          >
-            Man
-          </span>
-          <h3
-            class="profession"
-          >
-            Metalworker
-          </h3>
+            <h2
+              class="name"
+            >
+              Evangelia Cowin
+            </h2>
+            <span
+              class="gender"
+            >
+              Man
+            </span>
+            <h3
+              class="profession"
+            >
+              Metalworker
+            </h3>
+          </a>
         </article>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`renders correctly without results 1`] = `
+<DocumentFragment>
+  <section>
+    <div
+      class="wrapper"
+    >
+      <div
+        class="notFound"
+      >
+        <p
+          class="notFoundText"
+        >
+          No se han encontrado resultados
+        </p>
       </div>
     </div>
   </section>
