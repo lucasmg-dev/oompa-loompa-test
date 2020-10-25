@@ -1,8 +1,10 @@
 import { API_BASE_URL } from './config'
+import { Cache } from './cache'
 
 export class OompaLoompaClient {
-  constructor () {
+  constructor ({ useCache = true } = {}) {
     this.baseUrl = API_BASE_URL
+    this.useCache = useCache
   }
 
   serialize (obj, prefix) {
@@ -18,18 +20,29 @@ export class OompaLoompaClient {
     return str.join('&')
   }
 
-  buildUrl (resource, queryString = '') {
+  buildUrl (resource, queryString = null) {
     let url = `${this.baseUrl}/${resource}`
-    console.log(this.baseUrl)
     if (queryString) {
       url += `?${this.serialize(queryString)}`
     }
     return url
   }
 
-  async find (options = {}) {
-    const url = this.buildUrl('/', options)
+  async find (options = null) {
+    const url = this.buildUrl('', options)
+
+    if (this.useCache) {
+      const fromCache = Cache.get(url)
+      if (fromCache) return fromCache
+    }
+
     const response = await fetch(url)
-    return response.json()
+    const data = await response.json()
+
+    if (this.useCache) {
+      Cache.set(url, data)
+    }
+
+    return data
   }
 }
