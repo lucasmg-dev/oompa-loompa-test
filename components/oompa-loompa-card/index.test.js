@@ -9,6 +9,7 @@ it('renders correctly', () => {
   const oompaLompa = data.results[0]
   const Component = () => (
     <OompaLoompaCard
+      id={oompaLompa.id}
       image={oompaLompa.image}
       firstName={oompaLompa.first_name}
       lastName={oompaLompa.last_name}
