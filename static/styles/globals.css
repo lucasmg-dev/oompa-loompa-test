@@ -11,3 +11,8 @@ html {
   margin: 0 auto;
   max-width: 1000px;
 }
+
+a {
+  color: unset;
+  text-decoration: none;
+}
