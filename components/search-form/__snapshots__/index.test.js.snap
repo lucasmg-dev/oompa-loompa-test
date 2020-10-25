@@ -3,30 +3,34 @@
 exports[`renders correctly 1`] = `
 <DocumentFragment>
   <div
-    class="wrapper"
+    class="searchNav"
   >
-    <form
-      class="searchForm"
+    <div
+      class="wrapper"
     >
-      <div
-        class="searchFormGroup"
+      <form
+        class="searchForm"
       >
-        <input
-          class="searchInput"
-          placeholder="Search"
-          type="text"
-          value=""
-        />
         <div
-          class="searchIcon"
+          class="searchFormGroup"
         >
-          <img
-            src=""
-            width="15"
+          <input
+            class="searchInput"
+            placeholder="Search"
+            type="text"
+            value=""
           />
+          <div
+            class="searchIcon"
+          >
+            <img
+              src=""
+              width="15"
+            />
+          </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   </div>
 </DocumentFragment>
 `;
