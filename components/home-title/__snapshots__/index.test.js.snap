@@ -2,15 +2,19 @@
 
 exports[`renders correctly 1`] = `
 <DocumentFragment>
-  <h1
-    class="h1"
+  <div
+    class="homeTitle"
   >
-    Find your Oompa Loompa
-  </h1>
-  <h2
-    class="h2"
-  >
-    There are more than 100k
-  </h2>
+    <h1
+      class="h1"
+    >
+      Find your Oompa Loompa
+    </h1>
+    <h2
+      class="h2"
+    >
+      There are more than 100k
+    </h2>
+  </div>
 </DocumentFragment>
 `;
