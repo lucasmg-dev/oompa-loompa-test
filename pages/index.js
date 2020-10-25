@@ -6,16 +6,26 @@ import { HomeTitle } from '../components/home-title'
 import { OompaLoompaClient } from '../services/oompa-loompa'
 import { useOompaLoompas } from '../hooks/useOompaLoompas'
 import { GridOompaLoompas } from '../components/grid-oompa-loompas'
+import { useBottomPage } from '../hooks/useBottomScroll'
 
-export default function Home ({ initialOompaLoompas = [] }) {
-  const oompaLoompas = useOompaLoompas(initialOompaLoompas)
+export default function Home ({ initialData = [] }) {
+  const isBottomPage = useBottomPage({ offset: 100 })
+  const { data: oompaLoompas, setKeyword, keyword } = useOompaLoompas({ initialData, isBottomPage })
+
+  const handleFilter = value => {
+    if (value !== keyword) setKeyword(value)
+  }
+
   return (
     <>
       <Head>
         <title>Oompa Loompa&apos;s Crew</title>
+        <meta
+          name='description'
+          content='The application will serve as a tool to help the company’s Human Resources department' />
       </Head>
       <Header />
-      <SearchForm handleFilter={() => {}} />
+      <SearchForm handleFilter={handleFilter} />
       <HomeTitle />
       <GridOompaLoompas data={oompaLoompas}/>
     </>
@@ -23,11 +33,11 @@ export default function Home ({ initialOompaLoompas = [] }) {
 }
 
 export async function getServerSideProps (_ctx) {
-  const client = new OompaLoompaClient()
-  const initialOompaLoompas = await client.find()
-  return { props: { initialOompaLoompas } }
+  const client = new OompaLoompaClient({ useCache: false })
+  const response = await client.find()
+  return { props: { initialData: response.results || [] } }
 }
 
 Home.propTypes = {
-  initialOompaLoompas: PropTypes.object
+  initialData: PropTypes.array
 }
