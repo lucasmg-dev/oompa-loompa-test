@@ -32,9 +32,10 @@ export default function Home ({ initialData = [] }) {
   )
 }
 
-export async function getServerSideProps (_ctx) {
+export async function getServerSideProps ({ res }) {
   const client = new OompaLoompaClient({ useCache: false })
   const response = await client.find()
+  res.setHeader('Cache-control', 's-maxage=300, stale-while-revalidate')
   return { props: { initialData: response.results || [] } }
 }
 
