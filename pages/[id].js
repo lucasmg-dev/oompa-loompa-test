@@ -26,7 +26,7 @@ export default function Detail ({ initialData, errorCode }) {
   )
 }
 
-export async function getServerSideProps ({ params }) {
+export async function getServerSideProps ({ params, res }) {
   const client = new OompaLoompaClient({ useCache: false })
   const response = await client.getById(params.id)
   const errorCode = response.image ? 0 : 404
