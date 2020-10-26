@@ -1,0 +1,43 @@
+import PropTypes from 'prop-types'
+import Error from 'next/error'
+import { OompaLoompaClient } from '../services/oompa-loompa'
+import { Header } from '../components/header'
+import { OompaLoompaDetail } from '../components/oompa-loompa-detail'
+
+export default function Detail ({ initialData, errorCode }) {
+  if (errorCode) return <Error statusCode={errorCode} />
+  console.log(initialData)
+  return (
+    <>
+      <Header />
+      {initialData &&
+      <OompaLoompaDetail
+        image={initialData.image}
+        firstName={initialData.first_name}
+        lastName={initialData.last_name}
+        profession={initialData.profession}
+        gender={initialData.gender}
+        description={initialData.description}
+      />}
+    </>
+  )
+}
+
+export async function getServerSideProps ({ params }) {
+  const client = new OompaLoompaClient({ useCache: false })
+  const response = await client.getById(params.id)
+  const errorCode = response.image ? 0 : 404
+  const initialData = response.image ? response : null
+
+  return {
+    props: {
+      initialData,
+      errorCode
+    }
+  }
+}
+
+Detail.propTypes = {
+  initialData: PropTypes.object,
+  errorCode: PropTypes.number
+}

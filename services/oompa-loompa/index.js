@@ -45,4 +45,22 @@ export class OompaLoompaClient {
 
     return data
   }
+
+  async getById (id) {
+    const url = this.buildUrl(`${id}`)
+
+    if (this.useCache) {
+      const fromCache = Cache.get(url)
+      if (fromCache) return fromCache
+    }
+
+    const response = await fetch(url)
+    const data = await response.json()
+
+    if (this.useCache) {
+      Cache.set(url, data)
+    }
+
+    return data
+  }
 }
