@@ -8,15 +8,19 @@ exports[`renders correctly 1`] = `
     <nav
       class="wrapper wrapper"
     >
-      <img
-        class="logo"
-        src=""
-      />
-      <span
-        class="title"
+      <a
+        href="/"
       >
-        Oompa Loompa's Crew
-      </span>
+        <img
+          class="logo"
+          src=""
+        />
+        <span
+          class="title"
+        >
+          Oompa Loompa's Crew
+        </span>
+      </a>
     </nav>
   </header>
 </DocumentFragment>
