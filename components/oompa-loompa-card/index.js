@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import styles from './styles.module.css'
+import { parseGender } from '../../utils/oompa-loompa'
 
 export const OompaLoompaCard = ({
   id, image, firstName, lastName, gender, profession
@@ -16,7 +17,7 @@ export const OompaLoompaCard = ({
     <Link href={`/${id}`}>
       <a>
         <h2 className={styles.name}>{firstName} {lastName}</h2>
-        <span className={styles.gender}>{ gender === 'F' ? 'Woman' : 'Man' }</span>
+        <span className={styles.gender}>{ parseGender(gender) }</span>
         <h3 className={styles.profession}>{ profession }</h3>
       </a>
     </Link>
